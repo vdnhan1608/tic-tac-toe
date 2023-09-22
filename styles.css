@@ -22,8 +22,7 @@ body {
 	height: 500px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	justify-content: center;
-	align-items: center;
+	place-items: center;
 }
 
 #matrix div {

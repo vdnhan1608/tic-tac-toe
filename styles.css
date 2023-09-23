@@ -7,7 +7,7 @@ body {
 	height: 100vh;
 	margin: 0px;
 }
-#container {
+.container {
 	background: linear-gradient(135deg, #8052ec, #d161ff);
 	width: 100%;
 	height: 100%;
@@ -15,6 +15,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: absolute;
+	z-index: 1;
 }
 
 #matrix {
@@ -25,11 +27,23 @@ body {
 	place-items: center;
 }
 
-#matrix div {
-	width: 120px;
-	height: 120px;
+.cell {
+	width: 150px;
+	height: 150px;
 	border-radius: 15px;
 	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	font-size: 12vmin;
+	color: #d161ff;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+	cursor: pointer;
 }
 
 #restartBtn {
@@ -46,5 +60,37 @@ body {
 }
 
 #restartBtn:hover {
+	cursor: pointer;
+}
+
+.pop-up {
+	background: linear-gradient(135deg, #8052ec, #d161ff);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#message {
+	font-size: 12vmin;
+	font-weight: bolder;
+	color: #ffffff;
+}
+
+#start-game-button {
+	width: 100px;
+	height: 40px;
+	font-size: 1em;
+	border-radius: 5px;
+	font-weight: bolder;
+	background-color: #0a0027;
+	color: #ffffff;
+}
+
+#start-game-button:hover {
 	cursor: pointer;
 }
